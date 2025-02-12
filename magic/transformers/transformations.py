@@ -3,7 +3,7 @@ from mage_ai.io.config import ConfigFileLoader
 from mage_ai.io.postgres import Postgres
 from os import path
 from pandas import DataFrame
-
+http://localhost:6789/pipelines/postgrespipeline/edit?sideview=tree#
 # Importamos los decoradores de Mage si no están definidos
 if 'transformer' not in globals():
     from mage_ai.data_preparation.decorators import transformer

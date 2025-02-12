@@ -9,24 +9,22 @@ services:
     env_file:
       - .env
     environment:
-      ENV: dev
-      POSTGRES_DB: ${POSTGRES_SCHEMA}
+      ENV: ${ENV}
+      POSTGRES_SCHEMA: ${POSTGRES_SCHEMA}
+      POSTGRES_DBNAME: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_HOST: ${POSTGRES_HOST}
-      PG_HOST_PORT: ${PG_HOST_PORT}
+      POSTGRES_PORT: ${POSTGRES_PORT}
     ports:
       - "6789:6789"
     volumes:
-      - .:/home/src/                # Monta la carpeta actual en /home/src
+      - .:/home/src/
     restart: on-failure:5
 
   postgres:
     image: postgres:14
-    restart: on-failure
     container_name: postgres-magic
-    build:
-      context: ./db
     env_file:
       - .env
     environment:
@@ -34,4 +32,4 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
-      - "${PG_HOST_PORT}:5432"
+      - "${POSTGRES_PORT}:5432"
