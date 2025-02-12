@@ -1,0 +1,14 @@
+triggers:
+- description: null
+  envs: []
+  last_enabled_at: 2025-02-12 10:37:36.266224
+  name: hypnotic healer
+  pipeline_uuid: postgrespipeline
+  schedule_interval: '* * * * * '
+  schedule_type: time
+  settings: null
+  sla: null
+  start_time: 2025-02-12 10:32:00
+  status: active
+  token: 71c85e39b57249c9b30d9f145d6110c5
+  variables: {}

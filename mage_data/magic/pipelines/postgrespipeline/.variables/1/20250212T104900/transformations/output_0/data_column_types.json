@@ -1,0 +1,1 @@
+{"id": "int64", "sensor_id": "str", "reading_timestamp": "datetime64[ns]", "temperature": "float64", "temperature_fahrenheit": "float64"}
